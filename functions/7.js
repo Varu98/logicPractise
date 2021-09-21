@@ -5,5 +5,4 @@ const readlineSync = require("readline-sync");
 let arr = [];
 
 arr = readlineSync.question("enter the numbers");
-arr = parseInt(arr);
 console.log(arr.length);
