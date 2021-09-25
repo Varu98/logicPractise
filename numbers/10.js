@@ -1,7 +1,9 @@
-/*Write a JavaScript program to compute the sum of all digits that occur in a given string.
+/*Write a JavaScript program that reverses a number.
 
-Input: 1234
-Output: 1+2+3+4 = 10*/
+Example:
+
+Input:  32243;
+Output:  34223*/
 
 let n,
   sum = 0,
@@ -11,13 +13,8 @@ const readlineSync = require("readline-sync");
 
 n = readlineSync.question("Enter a String Of Intergers ");
 function sumOfStringOfNumbers() {
-  for (let i = 0; i < n.length; i++) {
-    arr[i] = n[i].split(i);
-    arr[i] = parseInt(arr[i]);
-  }
-  arr.forEach((num) => {
-    sum = sum + num;
-  });
-  console.log(sum);
+  n = n.split("").reverse().join("");
+
+  console.log(n);
 }
 sumOfStringOfNumbers();
