@@ -5,7 +5,7 @@ const btnH1 = document.querySelector(".btnH1");
 const btnH2 = document.querySelector(".btnH2");
 const btnH3 = document.querySelector(".btnH3");
 const output = document.querySelector(".output");
-
+//add comment
 function toH1() {
   output.innerHTML = `<h1>${input.value}</h1>`;
 }
