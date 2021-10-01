@@ -14,22 +14,27 @@ const getData = () => {
     },
   })
     .then((data) => data.json())
-    .then((d) => showData(d));
+    .then((d) => editData(d.location, d.current));
 };
 
-function showData(data) {
-  let dataMap = Object.entries(data.location);
-  let keys = [];
-  let values = [];
+function editData(dataLocation, dataCurrent) {
+  let dataL;
+  dataL = Object.entries(dataLocation);
+  dataL.map((item) => {
+    return (output.innerHTML =
+      output.innerHTML + `<p>${item[0]} &nbsp&nbsp&nbsp&nbsp  ${item[1]}</p>`);
+  });
 
-  for (let [key, value] of dataMap) {
-    keys.push(key);
-    values.push(value);
-  }
+  let newData;
+  newData = Object.entries(dataCurrent);
+  newData.map((item) => {
+    return (output.innerHTML =
+      output.innerHTML + `<p>${item[0]} &nbsp&nbsp&nbsp&nbsp ${item[1]}</p>`);
+  });
 
-  for (let i = 0; i < keys.length; i++) {
-    div.innerHTML[i] = keys[i];
-  }
+  console.log(newData);
+
+  // output.innerHTML = `<p>${data.name} ${data.region}</p>`;
 }
 
 btn.addEventListener("click", getData);
