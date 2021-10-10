@@ -10,3 +10,5 @@ function lessTime(str) {
   console.log(str);
 }
 lessTime("thursday 5th of october 5:30pm");
+
+// add comment
